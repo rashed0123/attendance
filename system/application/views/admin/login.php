@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<?php 
-		$title = "The RS Software";
+		$title = "Rokeya IT LTD";
 		echo title($title);
 		
 		$meta = array(
@@ -68,7 +68,7 @@
 <div  id="login_container">
     <div  id="header">
    
-		<div id="logo"><h1><?php echo anchor("admin_panel","The RS SOFTWARE");?></h1></div>
+		<div id="logo"><h1><?php echo anchor("admin_panel","Rokeya IT LTD");?></h1></div>
 		
     </div><!-- end header -->
 	   

@@ -2,25 +2,50 @@
 	$this->load->view("admin/template/header");
 	$this->load->view("admin/template/menu");
 ?>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( "#from_date" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat : 'dd-mm-yy'
+    });
+    $( "#to_date" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat : 'dd-mm-yy',
+    });
+  });
+  </script>
 	<script type="text/javascript">
-		/* function valid_form()
+		function valid_form()
 		{
-			var title = $("#title").val().trim();
-			var des = $("#des").val().trim();
-			if(title)
-				{
-					if(des)
-					{
-						return true;
-					}else{
-						alert("Enter Home description");
-						return false;
-					}
-				}else{
-					alert("Enter Home Title.");
-					return false;
-				}
-		} */
+			var from_date = $("#from_date").val().trim();
+			var to_date = $("#to_date").val().trim();
+			if(from_date)
+                        {
+                                if(to_date)
+                                {
+                                    
+                                    if(to_date >= from_date)
+                                    {
+                                        return true;
+                                    }else{
+                                        alert("Select Valid date.");
+                                        return false;
+                                    }
+                                    
+                                }else{
+                                        alert("Select To date");
+                                        return false;
+                                }
+                        }else{
+                                alert("Select From date");
+                                return false;
+                        }
+		} 
 	</script>
 
 	<div id="content_main" class="clearfix">
@@ -55,7 +80,7 @@
 				$att = array(
 					'id' 		=> "form",
 					'class' 	=> 'form',
-					/* 'onsubmit' 	=> 'return valid_form();' */
+					'onSubmit' 	=> 'return valid_form();'
 				);
 				echo form_open("reports/index",$att);
 			?>
@@ -66,6 +91,7 @@
 				$data = array(
 				  'name'   	=> 'from_date',
 				  'id'		=> 'from_date',
+                                    'readonly'  => 1,
 				  'required' => '1'
 				);
 				echo form_input($data);
@@ -77,6 +103,7 @@
 				$data = array(
 				  'name'    => 'to_date',
 				  'id'		=> 'to_date',
+                                     'readonly'  => 1,
 				  'required' => '1'
 				);
 				echo form_input($data);

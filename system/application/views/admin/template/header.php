@@ -5,7 +5,7 @@
 <head>
 
 	<?php 
-		$title = "Attendence";
+		$title = "Attendence::Rokeya IT LTD";
 		echo title($title);
 		
 		$meta = array(
@@ -110,7 +110,7 @@
 			<!--<p>System messages: 3. <a href="#">Read?</a></p>-->
 			<p class="last_login">Last login: <?php echo $this->session->userdata("user_up_time");?></p>
 		</div>
-		<div id="logo"><h1><?php echo anchor("admin_panel/dashboard","THE RS SOFTWARE");?></h1></div>
+		<div id="logo"><h1><?php echo anchor("admin_panel/dashboard","Rokeya IT LTD");?></h1></div>
 		
     </div><!-- end header -->
 	    <div id="content" >
