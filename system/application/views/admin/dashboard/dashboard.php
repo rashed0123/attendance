@@ -1,0 +1,1 @@
+<?php	$this->load->view("admin/template/header");	$this->load->view("admin/template/menu");?>	<div id="content_main" class="clearfix">		<?php			$this->load->view("admin/dashboard/container");			$this->load->view("admin/template/sidebar");		?>	</div>	<?php		$this->load->view("admin/template/footer");	?>
