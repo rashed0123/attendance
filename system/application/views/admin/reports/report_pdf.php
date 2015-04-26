@@ -41,9 +41,7 @@
 			<td style="border-bottom: 1px solid gray;border-right: 1px solid gray;" align="center">
 			<?php 
 				echo $queries->mobile;
-				
-				
-				
+			
 			?>
 			</td>
 			

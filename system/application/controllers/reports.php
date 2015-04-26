@@ -87,7 +87,7 @@ class Reports extends Controller {
                                         $data['query'] = $result;
 
                                         $html = $this->load->view('admin/reports/report_pdf', $data, true);
-                                        $mpdf->SetHTMLHeader('Rokeya IT LTD
+                                        $mpdf->SetHTMLHeader('The RS Software
                                                                         <div style="text-indent: -1999px;">Attendance Report</div>
                                                         <h2 style="text-align:center;text-decoration:underline;margin-bottom: 0px;color: #000000;font-size: 15px;">Attendance Report</h2>
 

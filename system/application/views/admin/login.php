@@ -84,7 +84,7 @@
 				</div>
 				<?php
 				}if(!empty($pass))
-					{
+				{
 				?>
 				<div id="fail" class="info_div">
 					<span class="ico_cancel"><?php echo str_replace("<p>","",$pass);?></span>
